@@ -30,7 +30,7 @@ public class PersonaResource {
     }
     
     @GetMapping("/find/{id}")
-    public ResponseEntity<Persona> getEmployeeById (@PathVariable("id") Long id) {
+    public ResponseEntity<Persona> getPersonaById (@PathVariable("id") Long id) {
         Persona persona = personaService.findPersonaById(id);
         return new ResponseEntity<>(persona, HttpStatus.OK);
     }

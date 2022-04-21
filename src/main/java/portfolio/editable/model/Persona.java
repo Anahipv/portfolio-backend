@@ -20,17 +20,20 @@ public class Persona implements Serializable{
     private String imageUrl;
     private String githubUrl;
     private String linkedinUrl;
+    @Column(length=500)
+    private String sobreMi;
 
     public Persona() {
     }
 
-    public Persona(Long id, String name, String jobTitle, String imageUrl, String githubUrl, String linkedinUrl) {
+    public Persona(Long id, String name, String jobTitle, String imageUrl, String githubUrl, String linkedinUrl, String sobreMi) {
         this.id = id;
         this.name = name;
         this.jobTitle = jobTitle;
         this.imageUrl = imageUrl;
         this.githubUrl = githubUrl;
         this.linkedinUrl = linkedinUrl;
+        this.sobreMi = sobreMi;
     }
 
     public Long getId() {
@@ -80,6 +83,16 @@ public class Persona implements Serializable{
     public void setLinkedinUrl(String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
     }
+
+    public String getSobreMi() {
+        return sobreMi;
+    }
+
+    public void setSobreMi(String sobreMi) {
+        this.sobreMi = sobreMi;
+    }
+    
+    
     
     
     
@@ -90,6 +103,9 @@ public class Persona implements Serializable{
                 ", name='" + name + '\'' +
                 ", jobTitle='" + jobTitle + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
+                ", githubUrl='" + githubUrl + '\'' +
+                ", linkedinUrl='" + linkedinUrl + '\'' +
+                ", sobreMi='" + sobreMi + '\'' +
                 '}';
     }
     

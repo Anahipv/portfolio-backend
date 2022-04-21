@@ -28,7 +28,7 @@ public class PersonaService {
     
     public Persona findPersonaById(Long id){
         return personaRepo.findPersonaById(id).orElseThrow(
-            () -> new UserNotFoundException("Persona " + id + "no "));
+            () -> new UserNotFoundException("Persona " + id + "no existe"));
     }
     
     public Persona editPersona(Persona persona) {
