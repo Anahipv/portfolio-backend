@@ -29,12 +29,6 @@ public class ProyectoResource {
         List<Proyecto> proyectos = proyectoService.findAllProyectos();
         return new ResponseEntity<>(proyectos, HttpStatus.OK);
     }
-    
-    @GetMapping("/find/{id}")
-    public ResponseEntity<Proyecto> getProyectoById (@PathVariable("id") Long id) {
-        Proyecto proyecto = proyectoService.findProyectoById(id);
-        return new ResponseEntity<>(proyecto, HttpStatus.OK);
-    }
 
     @PostMapping("/add")
     public ResponseEntity<Proyecto> addProyecto(@RequestBody Proyecto proyecto) {

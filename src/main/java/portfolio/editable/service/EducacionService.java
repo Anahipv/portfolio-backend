@@ -2,6 +2,7 @@
 package portfolio.editable.service;
 
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import portfolio.editable.exception.UserNotFoundException;
@@ -10,6 +11,7 @@ import portfolio.editable.repo.EducacionRepo;
 
 
 @Service
+@Transactional
 public class EducacionService {
     
     @Autowired
@@ -33,6 +35,11 @@ public class EducacionService {
     }
     
     public Educacion editEducacion(Educacion educacion) {
+        try {
+            findEducacionById(educacion.getId());
+        } catch (Exception e) {
+            return new Educacion();
+        }
         return educacionRepo.save(educacion);
     }
     

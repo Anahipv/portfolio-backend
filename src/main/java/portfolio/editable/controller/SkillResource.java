@@ -29,12 +29,6 @@ public class SkillResource {
         List<Skill> skill = skillService.findAllSkills();
         return new ResponseEntity<>(skill, HttpStatus.OK);
     }
-    
-    @GetMapping("/find/{id}")
-    public ResponseEntity<Skill> getSkillById (@PathVariable("id") Long id) {
-        Skill skill = skillService.findSkillById(id);
-        return new ResponseEntity<>(skill, HttpStatus.OK);
-    }
 
     @PostMapping("/add")
     public ResponseEntity<Skill> addSkill(@RequestBody Skill skill) {

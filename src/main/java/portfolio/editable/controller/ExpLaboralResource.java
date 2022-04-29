@@ -29,12 +29,6 @@ public class ExpLaboralResource {
         List<ExpLaboral> expLaboral = expLaboralService.findAllExpLaboral();
         return new ResponseEntity<>(expLaboral, HttpStatus.OK);
     }
-    
-    @GetMapping("/find/{id}")
-    public ResponseEntity<ExpLaboral> getExpLaboralById (@PathVariable("id") Long id) {
-        ExpLaboral expLaboral = expLaboralService.findExpLaboralById(id);
-        return new ResponseEntity<>(expLaboral, HttpStatus.OK);
-    }
 
     @PostMapping("/add")
     public ResponseEntity<ExpLaboral> addExpLaboral(@RequestBody ExpLaboral expLaboral) {

@@ -28,12 +28,6 @@ public class IdiomaResource {
         List<Idioma> idioma = idiomaService.findAllIdiomas();
         return new ResponseEntity<>(idioma, HttpStatus.OK);
     }
-    
-    @GetMapping("/find/{id}")
-    public ResponseEntity<Idioma> getIdiomaById (@PathVariable("id") Long id) {
-        Idioma idioma = idiomaService.findIdiomaById(id);
-        return new ResponseEntity<>(idioma, HttpStatus.OK);
-    }
 
     @PostMapping("/add")
     public ResponseEntity<Idioma> addIdioma(@RequestBody Idioma idioma) {

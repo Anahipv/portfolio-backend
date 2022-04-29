@@ -3,12 +3,14 @@ package portfolio.editable.service;
 
 import portfolio.editable.exception.UserNotFoundException;
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import portfolio.editable.model.Persona;
 import portfolio.editable.repo.PersonaRepo;
 
 @Service
+@Transactional
 public class PersonaService {
     
     @Autowired

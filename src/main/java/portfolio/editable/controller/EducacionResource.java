@@ -29,15 +29,9 @@ public class EducacionResource {
         List<Educacion> educaciones = educacionService.findAllEducaciones();
         return new ResponseEntity<>(educaciones, HttpStatus.OK);
     }
-    
-    @GetMapping("/find/{id}")
-    public ResponseEntity<Educacion> getEducacionById (@PathVariable("id") Long id) {
-        Educacion educacion = educacionService.findEducacionById(id);
-        return new ResponseEntity<>(educacion, HttpStatus.OK);
-    }
 
     @PostMapping("/add")
-    public ResponseEntity<Educacion> addPersona(@RequestBody Educacion educacion) {
+    public ResponseEntity<Educacion> addEducacion(@RequestBody Educacion educacion) {
         Educacion newEducacion = educacionService.addEducacion(educacion);
         return new ResponseEntity<>(newEducacion, HttpStatus.CREATED);
     }

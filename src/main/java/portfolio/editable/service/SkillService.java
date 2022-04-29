@@ -2,6 +2,7 @@
 package portfolio.editable.service;
 
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import portfolio.editable.exception.UserNotFoundException;
@@ -9,6 +10,7 @@ import portfolio.editable.model.Skill;
 import portfolio.editable.repo.SkillRepo;
 
 @Service
+@Transactional
 public class SkillService {
     
     @Autowired
