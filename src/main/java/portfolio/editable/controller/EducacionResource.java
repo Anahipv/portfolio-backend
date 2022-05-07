@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import portfolio.editable.model.Educacion;
 import portfolio.editable.service.EducacionService;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin
 @RestController
 @RequestMapping("/educacion")
 public class EducacionResource {
