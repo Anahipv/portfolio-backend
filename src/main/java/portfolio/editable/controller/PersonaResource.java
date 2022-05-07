@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import portfolio.editable.model.Persona;
 import portfolio.editable.service.PersonaService;
 
-@CrossOrigin
+@CrossOrigin(origins = "https://portfolio-anahipv.herokuapp.com")
 @RestController
 @RequestMapping("/home")
 public class PersonaResource {

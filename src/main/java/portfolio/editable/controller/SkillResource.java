@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import portfolio.editable.model.Skill;
 import portfolio.editable.service.SkillService;
 
-@CrossOrigin
+@CrossOrigin(origins = "https://portfolio-anahipv.herokuapp.com")
 @RestController
 @RequestMapping("/skills")
 public class SkillResource {
