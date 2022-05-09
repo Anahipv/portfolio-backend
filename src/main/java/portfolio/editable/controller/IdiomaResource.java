@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import portfolio.editable.model.Idioma;
 import portfolio.editable.service.IdiomaService;
 
-@CrossOrigin(origins = "https://portfolio-anahipv.herokuapp.com")
+//@CrossOrigin(origins = "https://portfolio-anahipv.herokuapp.com")
+@CrossOrigin
 @RestController
 @RequestMapping ("/idioma")
 public class IdiomaResource {

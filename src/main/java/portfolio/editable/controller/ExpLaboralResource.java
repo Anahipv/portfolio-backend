@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import portfolio.editable.model.ExpLaboral;
 import portfolio.editable.service.ExpLaboralService;
 
-@CrossOrigin(origins = "https://portfolio-anahipv.herokuapp.com")
+//@CrossOrigin(origins = "https://portfolio-anahipv.herokuapp.com")
+@CrossOrigin
 @RestController
 @RequestMapping("/explaboral")
 public class ExpLaboralResource {

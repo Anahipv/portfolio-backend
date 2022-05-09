@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import portfolio.editable.model.Proyecto;
 import portfolio.editable.service.ProyectoService;
 
-@CrossOrigin(origins = "https://portfolio-anahipv.herokuapp.com")
+//@CrossOrigin(origins = "https://portfolio-anahipv.herokuapp.com")
+@CrossOrigin
 @RestController
 @RequestMapping("/proyectos")
 public class ProyectoResource {
